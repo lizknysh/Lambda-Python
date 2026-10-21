@@ -10,16 +10,19 @@ HTML = '''<!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>MCIT Mini Bank</title><style>
 *{box-sizing:border-box}body{font-family:Arial,sans-serif;background:#f1f5f9;margin:0;color:#17243a}
-header{background:#152c55;color:white;padding:24px;text-align:center}main{max-width:850px;margin:28px auto;padding:0 18px}
+header{background:#166534;color:white;padding:24px;text-align:center}main{max-width:850px;margin:28px auto;padding:0 18px}
 .hero{background:linear-gradient(110deg,#173e7d,#2674b8);color:white;border-radius:16px;padding:28px}
 .hero h1{font-size:42px;margin:8px 0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:22px 0}
 .card{background:white;padding:24px;border-radius:12px;box-shadow:0 3px 12px #0001}
 input{width:100%;padding:12px;margin:8px 0;border:1px solid #cbd5e1;border-radius:6px}
-button{background:#2563eb;color:white;border:0;padding:12px 18px;border-radius:7px;cursor:pointer}
+button{background:#7c3aed;color:white;border:0;padding:12px 18px;border-radius:7px;cursor:pointer}
+button:hover{background:#6d28d9}
 button:hover{background:#1d4ed8}table{width:100%;border-collapse:collapse}th,td{padding:12px;text-align:left;border-bottom:1px solid #ddd}
 #message{margin:16px 0;font-weight:bold}.note{color:#64748b;font-size:13px}@media(max-width:650px){.grid{grid-template-columns:1fr}}
 </style></head><body><header><h2>MCIT Mini Bank</h2><div>AWS API Gateway + Lambda Classroom Demo</div></header>
-<main><section class="hero"><div>Available balance</div><h1 id="balance">Loading...</h1><div>Fictional account 10001</div></section>
+<main>
+<p>Welcome Elizabeth!</p>
+<section class="hero"><div>Available balance</div><h1 id="balance">Loading...</h1><div>Fictional account 10001</div></section>
 <p id="message" role="status"></p><div class="grid">
 <div class="card"><h2>Deposit</h2><input id="deposit" type="number" min="0.01" step="0.01" placeholder="Amount in dollars"><button onclick="transact('deposit')">Deposit</button></div>
 <div class="card"><h2>Withdraw</h2><input id="withdraw" type="number" min="0.01" step="0.01" placeholder="Amount in dollars"><button onclick="transact('withdraw')">Withdraw</button></div></div>
