@@ -1,0 +1,15 @@
+def lambda_handler(event, context):
+    
+    temperature = event["temperature"]
+    unit = event["unit"].upper()
+
+    if unit == "C":
+        result = (temperature * 9/5) + 32
+        return str(result) + "F"
+    
+    elif unit == "F":
+        result = (temperature - 32) * 5/9
+        return str(result) + "C" 
+    
+    else:
+        return "Invalid unit. Please use 'C' for Celsius or 'F' for Fahrenheit."
