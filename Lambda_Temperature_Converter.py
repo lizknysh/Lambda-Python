@@ -1,12 +1,13 @@
 def lambda_handler(event, context):
-    
     temperature = event["temperature"]
     unit = event["unit"].upper()
 
+    # Convert Celsius to Farenheit
     if unit == "C":
         result = (temperature * 9/5) + 32
         return str(result) + "F"
-    
+
+    # Convert Farenheit to Celsius
     elif unit == "F":
         result = (temperature - 32) * 5/9
         return str(result) + "C" 
